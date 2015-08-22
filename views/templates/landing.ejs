@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <%- include('head', {page: 'Welcome'}) %>
+  <body>
+    <h1>YOUR STINKING BADGES</h1>
+    <form class='pure-form-aligned' action='/badges' method='POST'>
+      <div class="pure-control-group">
+        <label for="username">Team Treehouse Username</label>
+        <input name="username">
+      </div>
+      <div class="pure-controls">
+        <input type="submit" class="pure-button pure-button-primary">
+      </div>
+    </form>
+    <%- include('javascripts') %>
+  </body>
+</html>
