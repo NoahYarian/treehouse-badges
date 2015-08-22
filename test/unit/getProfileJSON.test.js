@@ -1,10 +1,11 @@
 var expect = require('chai').expect;
-var badges = require('../lib/badges.js');
+var path = require('path');
+var getProfileJSON = require(path.join(process.cwd(), 'lib/getProfileJSON.js'));
 
-describe('badges', function() {
+describe('getProfileJSON', function() {
   it('should return Treehouse profile JSON', function (done) {
     this.timeout(5000);
-    badges('noahyarian', function(data) {
+    getProfileJSON('noahyarian', function(data) {
       expect(data.badges).to.include({
         id: 49,
         name: 'Newbie',
