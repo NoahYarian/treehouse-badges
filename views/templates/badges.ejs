@@ -2,21 +2,21 @@
 <html>
   <%- include('head', {page: 'Your Badges'}) %>
   <body>
-    <h1>Your Badges</h1>
+    <h1>Your Stinking Badges</h1>
     <div class='badges grid'>
       <% profileJSON.badges.forEach(function(badge) { %>
         <div class='grid-item'>
-          <!-- <figure> -->
+          <figure>
             <a href='<%= badge.url %>'>
               <img class='badgeImage' src='<%= badge.icon_url %>' alt='<%= badge.name %>'>
-              <!-- <figcaption><%= badge.name %></figcaption> -->
             </a>
-          <!-- </figure> -->
+          </figure>
         </div>
       <% }); %>
     </div>
     <%- include('javascripts') %>
     <script src='/lib/isotope/dist/isotope.pkgd.min.js'></script>
+    <script src="/lib/quantize.js"></script>
     <script src="/lib/color-thief.js"></script>
     <script src='/js/badges.js'></script>
   </body>
