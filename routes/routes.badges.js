@@ -1,19 +1,24 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
-var getProfileJSON = require(path.join(process.cwd(), 'lib/getProfileJSON.js'));
+var getProfileJSON = require(path.join(process.cwd(), 'lib/getProfileJSON'));
+var getBadgeImages = require(path.join(process.cwd(), 'lib/getBadgeImages'));
 
 router.get('/:username', function (req, res) {
-  getProfileJSON(req.params.username, function(data) {
-    res.render('templates/badges', {username: req.params.username, profileJSON: data});
+  var user = req.params.username;
+  getProfileJSON(user, function(data) {
+    getBadgeImages(user, function() {
+      res.render('templates/badges', {username: user, profileJSON: data});
+    });
   });
 });
 
 router.post('/', function (req, res) {
-  console.log("badges req.params: ", req.params);
-  console.log("badges req.body: ", req.body);
-  getProfileJSON(req.body.username, function(data) {
-    res.render('templates/badges', {username: req.body.username, profileJSON: data});
+  var user = req.body.username;
+  getProfileJSON(user, function(data) {
+    getBadgeImages(user, function() {
+      res.render('templates/badges', {username: user, profileJSON: data});
+    });
   });
 });
 

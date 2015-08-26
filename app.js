@@ -55,6 +55,7 @@ app.use(bodyParser.urlencoded({
 app.use('/', routesMain);
 app.use(express.static('www'));
 
+
 // app.use(function requireAuth(req, res, next) {
 //   if (req.session.user) {
 //     next();

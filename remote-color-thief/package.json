@@ -1,0 +1,21 @@
+{
+  "name": "color-thief-api",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "color-thief": "^2.1.0",
+    "cors": "^2.4.1",
+    "express": "^4.13.3",
+    "redis": "^0.12.1",
+    "request": "^2.40.0",
+    "rimraf": "~2.2.8",
+    "through2": "^0.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
