@@ -27,4 +27,5 @@ build/Release
 node_modules
 lib/secrets.js
 www/lib
-www/stylesheets/*.css
+*.css
+*.css.map

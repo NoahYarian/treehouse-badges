@@ -1,9 +1,16 @@
+---
 language: node_js
+
 node_js:
-  - "0.12"
+  - 0.12
 notifications:
   email: false
 script:
+  - npm test
+  - npm run lint
   - npm run test-cov
 after_success:
   - npm run codeclimate-coverage
+services:
+  - mongodb
+...

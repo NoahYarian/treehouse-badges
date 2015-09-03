@@ -10,7 +10,7 @@
         <div class='grid-item'>
           <figure>
             <a href='<%= badge.url %>'>
-              <img class='badgeImage' src='<%= fixedUrl %>' alt='<%= badge.name %>'>
+              <img class='badgeImage' src='<%= fixedUrl %>' alt='<%= badge.name %>' data-hue='<% badge.color %>'>
             </a>
           </figure>
         </div>
@@ -21,6 +21,6 @@
     <script src='/lib/isotope/dist/isotope.pkgd.min.js'></script>
     <script src="/lib/tinycolor/dist/tinycolor-min.js"></script>
     <script src="/lib/color-thief.js"></script>
-    <script src='/js/badges.js'></script>
+    <script src='/js/setBg.js'></script>
   </body>
 </html>
